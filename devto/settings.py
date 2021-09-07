@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # third part
     "import_export",
     "rest_framework_swagger",
+    "django_tables2"
 ]
 
 MIDDLEWARE = [

@@ -1,3 +1,5 @@
+{% load render_table from django_tables2 %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +7,15 @@
     <title>Home</title>
 </head>
 <body>
-        {% for app in apps %}
+        {% for app in apps_list %}
             <h5>{{ app|slugify }}</h5>
         {% endfor %}
         <form action="{% url 'to_excel' %}" method="POST">
             {% csrf_token %}
             <button type="submit">Export to excel</button>
         </form>
+        <hr>
+        {% render_table object_list %}
 
 </body>
 </html>
