@@ -8,6 +8,10 @@
         {% for app in apps %}
             <h5>{{ app|slugify }}</h5>
         {% endfor %}
+        <form action="{% url 'to_excel' %}" method="POST">
+            {% csrf_token %}
+            <button type="submit">Export to excel</button>
+        </form>
 
 </body>
 </html>

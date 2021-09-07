@@ -13,7 +13,7 @@ class AppResource(resources.ModelResource):
 
 
 class AppImportExport(ImportExportModelAdmin):
-    formats = (CSV, XLS, XLSX)  # export/import just these format
+    formats = (CSV, XLS, XLSX)  # export/import just these formats
     resource_class = AppResource
 
 
