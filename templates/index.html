@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+        {% for app in apps %}
+            <h5>{{ app|slugify }}</h5>
+        {% endfor %}
+
+</body>
+</html>
